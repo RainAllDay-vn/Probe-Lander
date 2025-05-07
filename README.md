@@ -5,3 +5,5 @@
 - Research Evolutionary algorithm
 - Research Actor-Critic algorithm
 - Research Deep-Q algorithm
+- Create Logic to detect collision between the Probe and the Ground
+- Create RewardGiver to train the Probe to lander at the origin
