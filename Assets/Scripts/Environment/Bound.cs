@@ -19,6 +19,7 @@ public class Bound : MonoBehaviour
     }
     public bool insideBound(Vector3 pos)
     {
+        Debug.Log(pos);
         Vector3 max = boxCollider.bounds.max;
         Vector3 min = boxCollider.bounds.min;
         for(int i = 0; i< 3; i++)

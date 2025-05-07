@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ExampleAgent : MonoBehaviour
+public class BaseAgent : MonoBehaviour
 {
     public RewardGiver rewardGiver; //rewardgiver
     public LanderController lander; //lander controller
@@ -8,15 +8,9 @@ public class ExampleAgent : MonoBehaviour
     public SpawnLander spawner;     //spawner, can also be found in the bound gameobject in environment
     private void Update()
     {
-        // Example Agent Logic: The closer the lander is to the ground, the greater the thruster force
-        float throt = Mathf.Max(0, (10 - transform.position.y)/10);
-        float[] throttle = { throt, throt, throt};
-        float[] angles = { 0, 0, 0, 0, 0, 0, 0 };
-        lander.SetThrusterAngle(angles);
-        lander.SetThrusterThrottle(throttle);
+
 
         Debug.Log(rewardGiver.Reward);
-
         if (!bound.insideBound(transform.position))
         {
             Debug.Log("Outside bound");
