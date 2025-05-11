@@ -20,8 +20,8 @@ public class RewardGiver : MonoBehaviour
             Rigidbody rb = lander.rb;
 
             float distanceFromLandPad = Vector3.Distance(pos2d, landPadPos);
-            float speed = rb.linearVelocity.magnitude;
-            float y_speed = Mathf.Abs(rb.linearVelocity.y);
+            float speed = rb.velocity.magnitude;
+            float y_speed = Mathf.Abs(rb.velocity.y);
             float angularSpeed = rb.angularVelocity.magnitude;
             float angleAlignment = Vector3.Dot(Vector3.up, lander.transform.up); // 1 when upright
             float height = lander.transform.position.y;

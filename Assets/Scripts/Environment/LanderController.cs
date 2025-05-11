@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,8 +10,8 @@ public class LanderController : MonoBehaviour
     public float thrust = 50;
     public float maxAngle = 5;
     public Transform[] thrusters;
-    float[] throttle = new float[3];
-    float[] angle = new float[6];
+    public float[] throttle = new float[3];
+    public float[] angle = new float[6];
     UnityEvent<Collider> onCollision;
     private int legTouched = 0;
 
@@ -39,8 +38,8 @@ public class LanderController : MonoBehaviour
     private void Update()
     {
         for (int i = 0; i < thrusters.Length; i++) {
-            float thrusterAngleX = angle[i * 2] * maxAngle;
-            float thrusterAngleZ = angle[i * 2+1] * maxAngle;
+            float thrusterAngleX = Mathf.Clamp01(angle[i * 2]) * maxAngle;
+            float thrusterAngleZ = Mathf.Clamp01(angle[i * 2+1]) * maxAngle;
             float thrusterThrottle = Mathf.Clamp01(throttle[i]) * thrust;
             thrusters[i].localRotation = Quaternion.Euler(thrusterAngleX,0,thrusterAngleZ);
             rb.AddForceAtPosition(thrusterThrottle * thrusters[i].up, thrusters[i].position);

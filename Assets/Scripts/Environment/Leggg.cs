@@ -1,10 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// ################
-// # DON'T CHANGE #
-// ################
-public class Leg : MonoBehaviour
+public class Leggg : MonoBehaviour
 {
     public UnityEvent<GameObject> onTouchGround;
     public UnityEvent<GameObject> onLeaveGround;

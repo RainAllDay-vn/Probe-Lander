@@ -5,25 +5,47 @@ using UnityEngine;
 // ################
 public class SpawnLander : MonoBehaviour
 {
-    public float xDistance = 20;
-    public float zDistance = 20;
+    public BoxCollider bound;
+    public Vector3 padding;
     public float yLevel = 20;
-    public float[] initVelecity = new float[2];
-    public float[] initOrientation = new float[6];
-    public void SetRandomPos(LanderController lander)
+    public void SetRandomPos(Transform lander)
     {
-        float randX = Random.Range(-xDistance, xDistance);
-        float randZ = Random.Range(-zDistance, zDistance);
+        Vector3 boundMax = bound.bounds.max - padding;
+        Vector3 boundMin = bound.bounds.min + padding;
+        float randX = Random.Range(boundMax.x, boundMin.x);
+        float randZ = Random.Range(boundMin.z, boundMax.z);
         RaycastHit hit;
-        float groundHeight = 0;
-        if (Physics.Raycast(new Vector3(randX, 50, randZ), Vector3.down, out hit))
+        float minY = boundMin.y;
+        if(Physics.Raycast(new Vector3(randX, boundMax.y, randZ), Vector3.down, out hit))
         {
-            groundHeight = 50 - hit.distance;
+            minY = boundMax.y - hit.distance;
         }
-        float randY = groundHeight + yLevel ;
-        lander.transform.position = new Vector3(randX, randY, randZ); 
-        lander.transform.rotation = Quaternion.identity;
-        lander.rb.linearVelocity = Vector3.zero;
-        lander.rb.angularVelocity = Vector3.zero;
+
+
+        float randY = yLevel;
+
+        lander.position = new Vector3(randX, randY, randZ); 
+    }
+    public Vector3 sampleRandomPos()
+    {
+
+        Vector3 boundMax = bound.bounds.max - padding;
+        Vector3 boundMin = bound.bounds.min + padding;
+        float randX = Random.Range(boundMax.x, boundMin.x);
+        float randZ = Random.Range(boundMin.z, boundMax.z);
+        float randY = Random.Range(boundMin.y, boundMax.y);
+        return new Vector3(randX, randY, randZ) ;
+    }
+    public Vector3 sampleRandomPos(Vector3 pos, float radius)
+    {
+
+        Vector3 boundMax = bound.bounds.max - padding;
+        Vector3 boundMin = bound.bounds.min + padding;
+        Vector2 dir = Random.insideUnitCircle * radius;
+        float randX = Mathf.Clamp(pos.x+dir.x, boundMin.x, boundMax.x);
+        float randZ = Mathf.Clamp(pos.z+ dir.y, boundMin.z, boundMax.z);
+        float randY = Random.Range(boundMin.y, boundMax.y);
+        return new Vector3(randX, randY, randZ);
+        
     }
 }
