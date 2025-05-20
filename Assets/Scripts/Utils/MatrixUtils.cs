@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class MatrixUtils 
@@ -8,8 +7,6 @@ public class MatrixUtils
         int aRows = A.GetLength(0), aCols = A.GetLength(1);
         int bRows = B.GetLength(0), bCols = B.GetLength(1);
 
-        if (aCols != bRows)
-            throw new InvalidOperationException("Incompatible matrix dimensions.");
 
         float[,] result = new float[aRows, bCols];
 
@@ -24,9 +21,6 @@ public class MatrixUtils
     {
         int rows = A.GetLength(0);
         int cols = A.GetLength(1);
-
-        if (rows != B.GetLength(0) || cols != B.GetLength(1))
-            throw new InvalidOperationException("Matrices must have the same dimensions.");
 
         float[,] result = new float[rows, cols];
         for (int i = 0; i < rows; i++)
@@ -57,7 +51,7 @@ public class MatrixUtils
         {
             for (int j = 0; j < cols; j++)
             {
-                result[i, j] = Math.Max(0, matrix[i, j]);
+                result[i, j] = Mathf.Max(0, matrix[i, j]);
             }
         }
 
@@ -89,10 +83,34 @@ public class MatrixUtils
         {
             for (int j = 0; j < cols; j++)
             {
-                matrix[i, j] += modifier;  // Example: element-wise addition with the scalar
-                                           // Or you could multiply: matrix[i, j] *= modifier;  // For multiplication
+                // pick a random value in [-modifier, +modifier]
+                float noise = Random.Range(-modifier, modifier);
+                matrix[i, j] += noise;
             }
         }
+    }
+
+    public static float[] Forward(float[,] weights, float[,] bias, float[] input, bool useReLU = true)
+    {
+        int inputSize = weights.GetLength(1);
+        int outputSize = weights.GetLength(0);
+
+
+        // Convert input to column vector
+        float[,] inputCol = new float[inputSize, 1];
+        for (int i = 0; i < inputSize; i++)
+            inputCol[i, 0] = input[i];
+
+        float[,] result = AddMatrices(Multiply(weights, inputCol), bias);
+        if (useReLU)
+            result = ReLU(result);
+
+        // Convert result back to 1D array
+        float[] output = new float[outputSize];
+        for (int i = 0; i < outputSize; i++)
+            output[i] = result[i, 0];
+
+        return output;
     }
 
 }

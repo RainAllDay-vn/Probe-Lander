@@ -1,20 +1,16 @@
-using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
-// ################
-// # DON'T CHANGE #
-// ################
 public class LanderController : MonoBehaviour
 {
     public Rigidbody rb;
     public float thrust = 50;
     public float maxAngle = 5;
     public Transform[] thrusters;
-    float[] throttle = new float[3];
-    float[] angle = new float[6];
-    UnityEvent<Collider> onCollision;
-    private int legTouched = 0;
+    public float[] throttle = new float[3];
+    public float[] angle = new float[6];
+    public int legTouched = 0;
 
     public int LegTouched
     {
@@ -36,7 +32,11 @@ public class LanderController : MonoBehaviour
     {
         this.angle = angles;
     }
-    private void Update()
+    private void Start()
+    {
+
+    }
+    private void Step()
     {
         for (int i = 0; i < thrusters.Length; i++) {
             float thrusterAngleX = angle[i * 2] * maxAngle;
@@ -46,9 +46,12 @@ public class LanderController : MonoBehaviour
             rb.AddForceAtPosition(thrusterThrottle * thrusters[i].up, thrusters[i].position);
         }      
     }
+    private void FixedUpdate()
+    {
+        Step();
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        onCollision?.Invoke(collision.collider);
     }
     public void onLegTouched()
     {

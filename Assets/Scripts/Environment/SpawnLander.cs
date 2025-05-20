@@ -5,25 +5,30 @@ using UnityEngine;
 // ################
 public class SpawnLander : MonoBehaviour
 {
-    public float xDistance = 20;
-    public float zDistance = 20;
+    public BoxCollider bound;
+    public Vector3 padding;
     public float yLevel = 20;
-    public float[] initVelecity = new float[2];
-    public float[] initOrientation = new float[6];
-    public void SetRandomPos(LanderController lander)
+    public float spawnRadius = 4;
+    public void SetRandomPos(Transform lander)
     {
-        float randX = Random.Range(-xDistance, xDistance);
-        float randZ = Random.Range(-zDistance, zDistance);
-        RaycastHit hit;
-        float groundHeight = 0;
-        if (Physics.Raycast(new Vector3(randX, 50, randZ), Vector3.down, out hit))
-        {
-            groundHeight = 50 - hit.distance;
-        }
-        float randY = groundHeight + yLevel ;
-        lander.transform.position = new Vector3(randX, randY, randZ); 
-        lander.transform.rotation = Quaternion.identity;
-        lander.rb.linearVelocity = Vector3.zero;
-        lander.rb.angularVelocity = Vector3.zero;
+        lander.position = sampleRandomPos();
+    }
+    public Vector3 sampleRandomPos()
+    {
+        float angle = Random.Range(-3.14f,3.14f);
+        Vector2 randPos =new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * spawnRadius;
+        return new Vector3(randPos.x, yLevel, randPos.y) ;
+    }
+    public Vector3 sampleRandomPos(Vector3 pos, float radius)
+    {
+
+        Vector3 boundMax = bound.bounds.max - padding;
+        Vector3 boundMin = bound.bounds.min + padding;
+        Vector2 dir = Random.insideUnitCircle * radius;
+
+        float randX = Mathf.Clamp(pos.x+dir.x, boundMin.x, boundMax.x);
+        float randZ = Mathf.Clamp(pos.z+ dir.y, boundMin.z, boundMax.z);
+        return new Vector3(randX, 0, randZ);
+        
     }
 }
