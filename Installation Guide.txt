@@ -1,5 +1,9 @@
 ### Installing Unity
-Download and install Unity 2023.2 or later via Unity Hub: https://unity3d.com/get-unity/download
+Download and install Unity 2022.3 via Unity Hub: https://unity3d.com/get-unity/download
+
+### Installing Anaconda
+
+Go to https://www.anaconda.com/download and install anaconda
 
 ### Installing ML-Agents
 
