@@ -25,11 +25,9 @@ Open Unity > Window > Package Manager > Unity Registry
 Search for ML Agents and install
 
 ### Preview or Continue the final model:
-- Navigate to the folder contain
-- Navigate to 'ppo-build' folder
 - Open up anaconda terminal and start mlagents venv
 - Train with the command:
-`mlagents-learn --env=<path_to_environment> --run-id=<run_id> --resume` to continue training
+`mlagents-learn --env=<path_to_folder_ppo_build> --run-id=final_model --resume` to continue training
 
 ### Opening Project to train in Unity
 - Open Unity Hub and open the downloaded project from disk
@@ -46,9 +44,8 @@ Search for ML Agents and install
 - A window will pop up with the training session starting from scratch.
 
 ### Training with Actor-Critic algorithm using pre-build version
-- Navigate to 'ppo-build' folder
 - Open up anaconda terminal and start mlagents venv
 - Train with the command:
-`mlagents-learn --env=<path_to_environment> --run-id=<run_id> to` start new training
-`mlagents-learn --env=<path_to_environment> --run-id=<run_id>` --force to restart training
+`mlagents-learn --env=<path_to_folder_ppo_build> --run-id=<run_id> to` start new training
+`mlagents-learn --env=<path_to_folder_ppo_build> --run-id=<run_id>` --force to restart training
 
