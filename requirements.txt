@@ -24,7 +24,14 @@ pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121
 Open Unity > Window > Package Manager > Unity Registry
 Search for ML Agents and install
 
-### Opening Project
+### Preview or Continue the final model:
+- Navigate to the folder contain
+- Navigate to 'ppo-build' folder
+- Open up anaconda terminal and start mlagents venv
+- Train with the command:
+`mlagents-learn --env=<path_to_environment> --run-id=<run_id> --resume` to continue training
+
+### Opening Project to train in Unity
 - Open Unity Hub and open the downloaded project from disk
 - The training environment is configured in the Smooth Surface Unity file, double-click to open it
 - On the left panel, we can choose which type of agent to training by ticking the box of all the probes in the corresponding agent pool.
@@ -42,5 +49,6 @@ Search for ML Agents and install
 - Navigate to 'ppo-build' folder
 - Open up anaconda terminal and start mlagents venv
 - Train with the command:
-`mlagents-learn --env=<path_to_environment>`
+`mlagents-learn --env=<path_to_environment> --run-id=<run_id> to` start new training
+`mlagents-learn --env=<path_to_environment> --run-id=<run_id>` --force to restart training
 
