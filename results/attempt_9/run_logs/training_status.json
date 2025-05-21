@@ -1,0 +1,163 @@
+{
+    "LanderPPODense": {
+        "checkpoints": [
+            {
+                "steps": 499975,
+                "file_path": "results\\attempt_9\\LanderPPODense\\LanderPPODense-499975.onnx",
+                "reward": -90.51750988430447,
+                "creation_time": 1747209873.1157498,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPODense\\LanderPPODense-499975.pt"
+                ]
+            },
+            {
+                "steps": 999903,
+                "file_path": "results\\attempt_9\\LanderPPODense\\LanderPPODense-999903.onnx",
+                "reward": -82.57086854339927,
+                "creation_time": 1747213051.6325228,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPODense\\LanderPPODense-999903.pt"
+                ]
+            },
+            {
+                "steps": 1499982,
+                "file_path": "results\\attempt_9\\LanderPPODense\\LanderPPODense-1499982.onnx",
+                "reward": -90.35560316198013,
+                "creation_time": 1747216289.3634226,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPODense\\LanderPPODense-1499982.pt"
+                ]
+            },
+            {
+                "steps": 1760733,
+                "file_path": "results\\attempt_9\\LanderPPODense\\LanderPPODense-1760733.onnx",
+                "reward": -63.63872339639319,
+                "creation_time": 1747218189.1576998,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPODense\\LanderPPODense-1760733.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1760733,
+            "file_path": "results\\attempt_9\\LanderPPODense.onnx",
+            "reward": -63.63872339639319,
+            "creation_time": 1747218189.1576998,
+            "auxillary_file_paths": [
+                "results\\attempt_9\\LanderPPODense\\LanderPPODense-1760733.pt"
+            ]
+        }
+    },
+    "LanderPPOSparse": {
+        "checkpoints": [
+            {
+                "steps": 499557,
+                "file_path": "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-499557.onnx",
+                "reward": -66.72499656677246,
+                "creation_time": 1747209917.8486843,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-499557.pt"
+                ]
+            },
+            {
+                "steps": 999629,
+                "file_path": "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-999629.onnx",
+                "reward": 55.20001086321744,
+                "creation_time": 1747213106.4465475,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-999629.pt"
+                ]
+            },
+            {
+                "steps": 1499780,
+                "file_path": "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-1499780.onnx",
+                "reward": 73.20001220703125,
+                "creation_time": 1747216344.1004663,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-1499780.pt"
+                ]
+            },
+            {
+                "steps": 1753715,
+                "file_path": "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-1753715.onnx",
+                "reward": 61.355567084418404,
+                "creation_time": 1747218188.8099554,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-1753715.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1753715,
+            "file_path": "results\\attempt_9\\LanderPPOSparse.onnx",
+            "reward": 61.355567084418404,
+            "creation_time": 1747218188.8099554,
+            "auxillary_file_paths": [
+                "results\\attempt_9\\LanderPPOSparse\\LanderPPOSparse-1753715.pt"
+            ]
+        }
+    },
+    "LanderPPOFormerSparse": {
+        "checkpoints": [
+            {
+                "steps": 3158617,
+                "file_path": "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-3158617.onnx",
+                "reward": -0.12730289548635482,
+                "creation_time": 1747248444.9541404,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-3158617.pt"
+                ]
+            },
+            {
+                "steps": 3499999,
+                "file_path": "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-3499999.onnx",
+                "reward": -0.00045979513985008413,
+                "creation_time": 1747250483.5307622,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-3499999.pt"
+                ]
+            },
+            {
+                "steps": 3999999,
+                "file_path": "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-3999999.onnx",
+                "reward": -1.532536894945416e-06,
+                "creation_time": 1747256275.4041414,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-3999999.pt"
+                ]
+            },
+            {
+                "steps": 4499999,
+                "file_path": "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-4499999.onnx",
+                "reward": -1.1397713147605475e-06,
+                "creation_time": 1747262065.9469812,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-4499999.pt"
+                ]
+            },
+            {
+                "steps": 4951507,
+                "file_path": "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-4951507.onnx",
+                "reward": null,
+                "creation_time": 1747267313.225016,
+                "auxillary_file_paths": [
+                    "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-4951507.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4951507,
+            "file_path": "results\\attempt_9\\LanderPPOFormerSparse.onnx",
+            "reward": null,
+            "creation_time": 1747267313.225016,
+            "auxillary_file_paths": [
+                "results\\attempt_9\\LanderPPOFormerSparse\\LanderPPOFormerSparse-4951507.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}

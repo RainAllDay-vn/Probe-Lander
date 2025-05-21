@@ -1,0 +1,105 @@
+{
+    "LanderPPO": {
+        "checkpoints": [
+            {
+                "steps": 3499399,
+                "file_path": "results\\lander_attempt2\\LanderPPO\\LanderPPO-3499399.onnx",
+                "reward": -118.22155450095593,
+                "creation_time": 1747039103.4722493,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt2\\LanderPPO\\LanderPPO-3499399.pt"
+                ]
+            },
+            {
+                "steps": 3999061,
+                "file_path": "results\\lander_attempt2\\LanderPPO\\LanderPPO-3999061.onnx",
+                "reward": -124.14309356689454,
+                "creation_time": 1747040147.8205469,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt2\\LanderPPO\\LanderPPO-3999061.pt"
+                ]
+            },
+            {
+                "steps": 4499961,
+                "file_path": "results\\lander_attempt2\\LanderPPO\\LanderPPO-4499961.onnx",
+                "reward": -126.45909118652344,
+                "creation_time": 1747041197.1985238,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt2\\LanderPPO\\LanderPPO-4499961.pt"
+                ]
+            },
+            {
+                "steps": 4999020,
+                "file_path": "results\\lander_attempt2\\LanderPPO\\LanderPPO-4999020.onnx",
+                "reward": -118.88564847550302,
+                "creation_time": 1747042229.9444492,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt2\\LanderPPO\\LanderPPO-4999020.pt"
+                ]
+            },
+            {
+                "steps": 5400602,
+                "file_path": "results\\lander_attempt2\\LanderPPO\\LanderPPO-5400602.onnx",
+                "reward": -137.2414174761091,
+                "creation_time": 1747043140.6116393,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt2\\LanderPPO\\LanderPPO-5400602.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5400602,
+            "file_path": "results\\lander_attempt2\\LanderPPO.onnx",
+            "reward": -137.2414174761091,
+            "creation_time": 1747043140.6116393,
+            "auxillary_file_paths": [
+                "results\\lander_attempt2\\LanderPPO\\LanderPPO-5400602.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    },
+    "LanderDeepQ": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\lander_attempt2\\LanderDeepQ\\LanderDeepQ-0.onnx",
+                "reward": null,
+                "creation_time": 1746976214.3401735,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt2\\LanderDeepQ\\LanderDeepQ-0.pt"
+                ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\lander_attempt2\\LanderDeepQ\\LanderDeepQ-0.onnx",
+                "reward": null,
+                "creation_time": 1746976608.5737383,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt2\\LanderDeepQ\\LanderDeepQ-0.pt"
+                ]
+            },
+            {
+                "steps": 0,
+                "file_path": "results\\lander_attempt2\\LanderDeepQ\\LanderDeepQ-0.onnx",
+                "reward": null,
+                "creation_time": 1746976931.610395,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt2\\LanderDeepQ\\LanderDeepQ-0.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 0,
+            "file_path": "results\\lander_attempt2\\LanderDeepQ.onnx",
+            "reward": null,
+            "creation_time": 1746976931.610395,
+            "auxillary_file_paths": [
+                "results\\lander_attempt2\\LanderDeepQ\\LanderDeepQ-0.pt"
+            ]
+        }
+    }
+}
