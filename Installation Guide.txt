@@ -29,8 +29,7 @@ Search for ML Agents and install
 The environment is already configured in the Smooth Surface Unity file.
 
 ###Training with Genetic Algorithm
-- Open the project in unity 2022.3
-- Press Play to start training
+-Navigate to genetic build folder and run
 
 ###Training with Deep Q-Learning
 - Use the Deep Q Unity build
@@ -39,5 +38,5 @@ The environment is already configured in the Smooth Surface Unity file.
 ###Training with PPO
 - Go to the PPO build folder
 - Train with:
-mlagents-learn config.yaml --env=<path_to_environment>
+mlagents-learn --env=<path_to_environment>
 
