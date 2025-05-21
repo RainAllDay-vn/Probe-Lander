@@ -38,5 +38,6 @@ Search for ML Agents and install
 - Navigate to 'ppo-build' folder
 - Open up anaconda terminal and start mlagents venv
 - Train with the command:
-`mlagents-learn --env=<path_to_environment>`
-
+   mlagents-learn --env=<path_to_environment> --run-id=<run_id> --resume to continue training
+   mlagents-learn --env=<path_to_environment> --run-id=<run_id> to start new training
+   mlagents-learn --env=<path_to_environment> --run-id=<run_id> --force to restart training
