@@ -13,7 +13,7 @@ public class GeneticAgent : MonoBehaviour
     public float  landPadSpawnRadius = 1;
     public float max_rand_angle = 15;
     public GeneticManager manager;
-    public struct Layer
+    public class Layer
     {
         public float[,] weight;
         public float[,] bias;
@@ -85,9 +85,10 @@ public class GeneticAgent : MonoBehaviour
             angularVel.x, angularVel.y, angularVel.z,
             position.x, position.y, position.z,
             rotation.x, rotation.y, rotation.z,
-            landPad.x, landPad.y, landPad.z
+            landPad.x, landPad.y, landPad.z,
+            0,0,0,
+            0,0,0
         };
-        Debug.Log(obs.ToString());
         return obs;
     }
 

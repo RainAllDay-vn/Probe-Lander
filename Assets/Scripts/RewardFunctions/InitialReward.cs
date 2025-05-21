@@ -82,7 +82,6 @@ public class SparseReward : RewardGiver
 
     private void OnCollisionStay(Collision collision)
     {
-        return;
         if (_done || !_hasTouchedDown) return;
 
         Vector2 pos2d = new Vector2(transform.position.x, transform.position.z);

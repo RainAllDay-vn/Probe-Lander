@@ -30,20 +30,20 @@ public class FormerSparseReward : RewardGiver
         if (lander.rb.velocity.y > 1)
         {
             SetReward(-1);
-            //EndEpisode();
-           // return;
+            EndEpisode();
+            return;
         }
         if (lander.rb.angularVelocity.magnitude > 3)
         {
             SetReward(-1);
-            //EndEpisode();
-            //return;
+            EndEpisode();
+            return;
         }
         if (Vector3.Angle(Vector3.up, transform.up) > 30)
         {
             SetReward(-1);
-            //EndEpisode();
-            //return;
+            EndEpisode();
+            return;
         }
         else
         {
@@ -69,7 +69,7 @@ public class FormerSparseReward : RewardGiver
         if (collision.relativeVelocity.magnitude > 3)
         {
             SetReward(-1);
-            //EndEpisode();
+            EndEpisode();
             return;
         }
         Vector2 pos2d = new Vector2(transform.position.x, transform.position.z);
@@ -78,7 +78,7 @@ public class FormerSparseReward : RewardGiver
         {
             Debug.Log("Land outsite");
             SetReward(0.5f);
-            //EndEpisode();
+            EndEpisode();
             return;
         }
         // mark that we’ve touched ground at least once
@@ -97,7 +97,7 @@ public class FormerSparseReward : RewardGiver
         {
             SetReward(-1f);
             _done = true;
-            //EndEpisode();
+            EndEpisode();
             return;
         }
 
@@ -119,7 +119,7 @@ public class FormerSparseReward : RewardGiver
             NumberDisplay.Instance.Count++;
             SetReward(+1f);
             _done = true;
-            //EndEpisode();
+            EndEpisode();
 
         }
         // else: fewer than 4 legs, keep waiting
