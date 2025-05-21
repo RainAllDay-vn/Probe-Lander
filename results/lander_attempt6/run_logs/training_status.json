@@ -1,0 +1,47 @@
+{
+    "LanderPPO": {
+        "checkpoints": [
+            {
+                "steps": 499880,
+                "file_path": "results\\lander_attempt6\\LanderPPO\\LanderPPO-499880.onnx",
+                "reward": -8.039124463055584,
+                "creation_time": 1747134703.8478055,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt6\\LanderPPO\\LanderPPO-499880.pt"
+                ]
+            },
+            {
+                "steps": 999945,
+                "file_path": "results\\lander_attempt6\\LanderPPO\\LanderPPO-999945.onnx",
+                "reward": -3.217335789291947,
+                "creation_time": 1747135889.4368534,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt6\\LanderPPO\\LanderPPO-999945.pt"
+                ]
+            },
+            {
+                "steps": 1293329,
+                "file_path": "results\\lander_attempt6\\LanderPPO\\LanderPPO-1293329.onnx",
+                "reward": null,
+                "creation_time": 1747136681.7181904,
+                "auxillary_file_paths": [
+                    "results\\lander_attempt6\\LanderPPO\\LanderPPO-1293329.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1293329,
+            "file_path": "results\\lander_attempt6\\LanderPPO.onnx",
+            "reward": null,
+            "creation_time": 1747136681.7181904,
+            "auxillary_file_paths": [
+                "results\\lander_attempt6\\LanderPPO\\LanderPPO-1293329.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.2.2+cu121"
+    }
+}
