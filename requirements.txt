@@ -1,0 +1,47 @@
+### Installing Unity
+Download and install Unity 2022.3 via Unity Hub: https://unity3d.com/get-unity/download
+
+### Installing Anaconda
+
+Go to https://www.anaconda.com/download and install anaconda
+
+### Installing ML-Agents
+
+1. Set Up Python Environment (with Conda)
+conda create -n mlagents python=3.10.12 && conda activate mlagents
+
+2. Clone ML-Agents Repository
+git clone --branch release_22 https://github.com/Unity-Technologies/ml-agents.git
+cd ml-agents
+
+3. Install ML-Agents Python Packages
+python -m pip install ./ml-agents-envs
+python -m pip install ./ml-agents
+
+4. Install PyTorch with CUDA (Windows only)
+pip3 install torch~=2.2.1 --index-url https://download.pytorch.org/whl/cu121
+
+5. Add Unity Packages
+Open Unity > Window > Package Manager > Unity Registry
+Search for ML Agents and install
+
+### Opening Project
+- Open Unity Hub and open the downloaded project from disk
+- The training environment is configured in the Smooth Surface Unity file, double-click to open it
+- On the left panel, we can choose which type of agent to training by ticking the box of all the probes in the corresponding agent pool.
+- Click play to enable the training process
+
+###Training with Genetic Algorithm using pre-build version
+- Navigate to 'genetic-build' folder and run LanderProbe.exe
+- A window will pop up with the training session starting from scratch.
+
+###Training with Deep-Q-Learning using pre-build version
+- Navigate to 'deepq-build' folder and run LanderProbe.exe
+- A window will pop up with the training session starting from scratch.
+
+###Training with Actor-Critic algorithm using pre-build version
+- Navigate to 'ppo-build' folder
+- Open up anaconda terminal and start mlagents venv
+- Train with the command:
+`mlagents-learn --env=<path_to_environment>`
+
